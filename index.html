@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CJ's Escape Room</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 64px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 28px;
+      color: #34495e;
+      margin-bottom: 40px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .yes-btn {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .yes-btn:hover {
+      background-color: #219150;
+    }
+
+    .no-btn {
+      background-color: #c0392b;
+      color: white;
+    }
+
+    .no-btn:hover {
+      background-color: #a93226;
+    }
+  </style>
+</head>
+<body>
+  <h1>CJ's Escape Room</h1>
+  <p>Would you like to play?</p>
+  <div class="button-container">
+    <button class="no-btn" onclick="alert('Maybe next time!')">No</button>
+    <button class="yes-btn" onclick="location.href='rules.html'">Yes</button>
+  </div>
+</body>
+</html>
