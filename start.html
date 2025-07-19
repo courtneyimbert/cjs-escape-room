@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Game - CJ's Escape Room</title>
+  <style>
+    body {
+      background-color: #f0f0f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .game-button {
+      font-size: 22px;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 250px;
+    }
+
+    .ghost {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .ghost:hover {
+      background-color: #2980b9;
+    }
+
+    .petal {
+      background-color: #9b59b6;
+      color: white;
+    }
+
+    .petal:hover {
+      background-color: #884ea0;
+    }
+
+    .random {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    .random:hover {
+      background-color: #ca6f1e;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Which game would you like to play?</h1>
+
+  <div class="button-container">
+    <button class="game-button ghost" onclick="location.href='one-armed-ghost.html'">The One-Armed Ghost</button>
+    <button class="game-button petal" onclick="location.href='petal-puzzle.html'">Petal Puzzle</button>
+    <button class="game-button random" onclick="chooseRandomGame()">Random</button>
+  </div>
+
+  <script>
+    function chooseRandomGame() {
+      const games = ['one-armed-ghost.html', 'petal-puzzle.html'];
+      const randomIndex = Math.floor(Math.random() * games.length);
+      window.location.href = games[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
